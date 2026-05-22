@@ -4,7 +4,6 @@
 // ============================================================
 
 const PRODUCTOS = [
-  { id:2,  nombre:"Hybrid Kitten Green",  categoria:"lentes", precio:35000, descripcion:"Lente de contacto verde con matices amarillos, efecto natural y vibrante.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"lente-hybrid-kitten-green.jpeg", nuevo:false },
 { id:3,  nombre:"Millennial Spice",     categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris con efecto moderno y elegante.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"lente-millennial-spice.jpeg", nuevo:false },
 { id:4,  nombre:"Sugar Strike",         categoria:"lentes", precio:35000, descripcion:"Lente de contacto marrón claro con efecto cálido.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"lente-sugar-strike.jpeg", nuevo:false },
 { id:6,  nombre:"Tiffany",              categoria:"lentes", precio:35000, descripcion:"Lente de contacto azul con matices amarillos.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"lente-tiffany.jpeg", nuevo:false, oferta:true, precioOferta:30000 },
