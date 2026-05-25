@@ -4,6 +4,11 @@
 // ============================================================
 
 const PRODUCTOS = [
+{ id:16, nombre:"Chicago Grey",         categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris elegante con aro oscuro pronunciado. Diseño moderno que amplía la mirada con efecto sofisticado.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"Chicago-Grey.jpg", nuevo:true },
+{ id:17, nombre:"Venice Brown",         categoria:"lentes", precio:35000, descripcion:"Lente de contacto marrón cálido con degradado natural. Efecto profundo y luminoso para una mirada irresistible.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 38%"], img:"Venice-Brown.jpg", nuevo:true },
+{ id:18, nombre:"OMG Brown",            categoria:"lentes", precio:35000, descripcion:"Lente de contacto marrón intenso con matices dorados. Diseño EYESHARE con aro oscuro que define y amplía la mirada.", especificaciones:["DIA: 14.0mm","Agua: 38%"], img:"OMG-Brown.jpg", nuevo:true },
+{ id:19, nombre:"Marrón Moca",          categoria:"lentes", precio:35000, descripcion:"Lente de contacto marrón cálido con efecto natural y luminoso. Ideal para un look elegante y sofisticado de larga duración.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"Marron-Moca.jpg", nuevo:true },
+{ id:20, nombre:"5-HT",                 categoria:"lentes", precio:35000, descripcion:"Lente de contacto azul celeste con gradación suave. Efecto cristalino y profundo que transforma la mirada con elegancia.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"5-HT.jpg", nuevo:true },
 { id:3,  nombre:"Millennial Spice",     categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris con efecto moderno y elegante.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"lente-millennial-spice.jpeg", nuevo:false },
 { id:4,  nombre:"Sugar Strike",         categoria:"lentes", precio:35000, descripcion:"Lente de contacto marrón claro con efecto cálido.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"lente-sugar-strike.jpeg", nuevo:false },
 { id:6,  nombre:"Tiffany",              categoria:"lentes", precio:35000, descripcion:"Lente de contacto azul con matices amarillos.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"lente-tiffany.jpeg", nuevo:false, oferta:true, precioOferta:30000 },
