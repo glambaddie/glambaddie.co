@@ -23,7 +23,6 @@ const PRODUCTOS = [
 { id:26, nombre:"Bohemia Gray",         categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris con aro oscuro pronunciado y efecto radiante. Diseño AMARA que amplía y sofistica la mirada al instante.", especificaciones:["DIA: 14.5mm"], img:"BOHEMIA-GRAY.jpg", nuevo:true },
 { id:27, nombre:"Hellenic Gray",        categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris suave con efecto ahumado y luminoso. Diseño EYESHARE de uso anual que transforma la mirada con naturalidad.", especificaciones:["DIA: 14.5mm","Uso: 1 año"], img:"HELLENIC-GRAY.jpg", nuevo:true },
 { id:28, nombre:"Sahara Gray",          categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris verdoso con degradado natural y aro definido. Diseño AMARA que aporta profundidad y carácter a la mirada.", especificaciones:["DIA: 14.5mm"], img:"SAHARA-GRAY.jpg", nuevo:true },
-{ id:29, nombre:"Estonia Blue",         categoria:"lentes", precio:35000, descripcion:"Lente de contacto azul turquesa con efecto vibrante y aro oscuro. Diseño EYESHARE con agua al 38% para máximo confort todo el día.", especificaciones:["DIA: 14.5mm","Agua: 38%"], img:"ESTONIA-BLUE.jpg", nuevo:true },
 { id:30, nombre:"Holland Gray",         categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris claro con textura uniforme y aro oscuro. Diseño AMARA que enmarca la mirada con elegancia y sofisticación.", especificaciones:["DIA: 14.5mm"], img:"HOLLAND-GRAY.jpg", nuevo:true },
 ];
 // ============================================================
