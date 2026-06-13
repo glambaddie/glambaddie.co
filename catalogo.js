@@ -24,6 +24,8 @@ const PRODUCTOS = [
 { id:27, nombre:"Hellenic Gray",        categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris suave con efecto ahumado y luminoso. Diseño EYESHARE de uso anual que transforma la mirada con naturalidad.", especificaciones:["DIA: 14.5mm","Uso: 1 año"], img:"HELLENIC-GRAY.jpg", nuevo:true },
 { id:28, nombre:"Sahara Gray",          categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris verdoso con degradado natural y aro definido. Diseño AMARA que aporta profundidad y carácter a la mirada.", especificaciones:["DIA: 14.5mm"], img:"SAHARA-GRAY.jpg", nuevo:true },
 { id:30, nombre:"Holland Gray",         categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris claro con textura uniforme y aro oscuro. Diseño AMARA que enmarca la mirada con elegancia y sofisticación.", especificaciones:["DIA: 14.5mm"], img:"HOLLAND-GRAY.jpg", nuevo:true },
+{ id:31, nombre:"Estonia Blue",        categoria:"lentes", precio:35000, descripcion:"Lente de contacto azul verdoso con efecto cristalino y aro suave. Diseño EYESHARE que amplía y transforma la mirada con elegancia natural.", especificaciones:["DIA: 14.5mm","Agua: 38%"], img:"Estonia-Blue.jpg", nuevo:true },
+{ id:32, nombre:"Madrid Brown",        categoria:"lentes", precio:35000, descripcion:"Lente de contacto marrón dorado con degradado cálido y luminoso. Diseño EYESHARE que profundiza y embellece la mirada con un toque sofisticado.", especificaciones:["DIA: 14.0mm","Agua: 38%"], img:"Madrid-Brown.jpg", nuevo:true },
 ];
 // ============================================================
 //  Estado de la app
