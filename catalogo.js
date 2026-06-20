@@ -24,7 +24,7 @@ const PRODUCTOS = [
 { id:30, nombre:"Holland Gray",         categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris claro con textura uniforme y aro oscuro. Diseño AMARA que enmarca la mirada con elegancia y sofisticación.", especificaciones:["DIA: 14.5mm"], img:"HOLLAND-GRAY.jpg", nuevo:false },
 { id:31, nombre:"Estonia Blue",        categoria:"lentes", precio:35000, descripcion:"Lente de contacto azul verdoso con efecto cristalino y aro suave. Diseño EYESHARE que amplía y transforma la mirada con elegancia natural.", especificaciones:["DIA: 14.5mm","Agua: 38%"], img:"Estonia-Blue.jpg", nuevo:false },
 { id:32, nombre:"Madrid Brown",        categoria:"lentes", precio:35000, descripcion:"Lente de contacto marrón dorado con degradado cálido y luminoso. Diseño EYESHARE que profundiza y embellece la mirada con un toque sofisticado.", especificaciones:["DIA: 14.0mm","Agua: 38%"], img:"Madrid-Brown.jpg", nuevo:false },
-{ id:33, nombre:"Stunna Girl Brown",   categoria:"lentes", precio:35000, descripcion:"Lente de contacto marrón dorado con efecto cálido y luminoso. Diseño suave que transforma la mirada con un toque natural e irresistible.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:null, video:"https://raw.githubusercontent.com/glambaddie/glambaddie.co/main/0aada12c8f4bed5bcf69e028e7590157.mp4", nuevo:false },
+{ id:33, nombre:"Stunna Girl Brown",   categoria:"lentes", precio:35000, descripcion:"Lente de contacto marrón dorado con efecto cálido y luminoso. Diseño suave que transforma la mirada con un toque natural e irresistible.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"Stunna-Girl-Brown.jpg", video:"videos/Stunna-Girl-Brown.mp4", nuevo:false },
 ];
 // ============================================================
 //  Estado de la app
@@ -77,9 +77,7 @@ function renderCardList(prods, gridEl) {
     card.className = 'card';
     card.setAttribute('data-id', p.id);
     card.setAttribute('onclick', `openModal(${p.id})`);
-    const mediaHtml = (p.video && !p.img)
-      ? `<video class="card-img" src="${p.video}" muted autoplay loop playsinline style="object-fit:cover;width:100%;height:100%;"></video>`
-      : `<img class="card-img"
+    const mediaHtml = `<img class="card-img"
           src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%231a0835'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23ffffff80' font-size='14'%3EGlambaddie.co%3C/text%3E%3C/svg%3E"
           data-src="${img}" alt="${p.nombre}" loading="lazy">`;
     card.innerHTML = `
@@ -204,14 +202,17 @@ function openModal(id) {
   const modalImg   = document.getElementById('modalImg');
   const modalVideo = document.getElementById('modalVideo');
 
-  if (p.video && !p.img) {
-    modalImg.style.display   = 'none';
+  if (p.video) {
+    // Hay video de la referencia puesta: se muestra en el modal de especificaciones
+    modalImg.style.display = 'none';
     if (modalVideo) {
       modalVideo.src           = p.video;
       modalVideo.style.display = 'block';
+      modalVideo.play().catch(() => {}); // por si el navegador bloquea el autoplay
     }
   } else {
-    if (modalVideo) { modalVideo.style.display = 'none'; modalVideo.src = ''; }
+    // Sin video: se muestra la foto normal
+    if (modalVideo) { modalVideo.pause(); modalVideo.style.display = 'none'; modalVideo.src = ''; }
     modalImg.style.display = '';
     modalImg.src           = normalizeImg(p.img);
   }
@@ -230,6 +231,8 @@ function openModal(id) {
 function closeModal() {
   document.getElementById('modalOverlay').classList.remove('active');
   document.body.style.overflow = '';
+  const modalVideo = document.getElementById('modalVideo');
+  if (modalVideo) modalVideo.pause();
 }
 
 // ============================================================
