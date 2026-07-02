@@ -202,15 +202,13 @@ function openModal(id) {
   const modalVideo = document.getElementById('modalVideo');
 
   if (p.video) {
-    // Hay video de la referencia puesta: se muestra en el modal de especificaciones
     modalImg.style.display = 'none';
     if (modalVideo) {
       modalVideo.src           = p.video;
       modalVideo.style.display = 'block';
-      modalVideo.play().catch(() => {}); // por si el navegador bloquea el autoplay
+      modalVideo.play().catch(() => {});
     }
   } else {
-    // Sin video: se muestra la foto normal
     if (modalVideo) { modalVideo.pause(); modalVideo.style.display = 'none'; modalVideo.src = ''; }
     modalImg.style.display = '';
     modalImg.src           = normalizeImg(p.img);
@@ -304,4 +302,5 @@ window.openModal      = openModal;
 window.addToCart      = addToCart;
 window.updateQty      = updateQty;
 window.removeFromCart = removeFromCart;
-w
+window.clearCart      = clearCart;
+window.closeModal     = closeModal;
