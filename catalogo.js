@@ -304,5 +304,4 @@ window.openModal      = openModal;
 window.addToCart      = addToCart;
 window.updateQty      = updateQty;
 window.removeFromCart = removeFromCart;
-window.clearCart      = clearCart;
-window.closeModal     = closeModal;
+w
