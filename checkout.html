@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Finalizar compra | Glambaddie.co</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#e8389a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>">
+<style>
+  :root{
+    --pink:#e8389a;
+    --pink-dark:#c22a7c;
+    --pink-pale:#fdeef6;
+    --purple:#1a0835;
+    --ink:#2c1338;
+    --muted:#8a7690;
+    --line:#f0dfe9;
+    --green:#1fae6b;
+    --radius:16px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Nunito',sans-serif;
+    background:var(--pink-pale);
+    color:var(--ink);
+  }
+  h1,h2,h3,.brand{font-family:'Fredoka One',cursive;font-weight:400;}
+  a{color:inherit;}
+
+  header.co-header{
+    background:#fff;
+    padding:14px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid var(--line);
+    position:sticky; top:0; z-index:20;
+  }
+  .brand{font-size:1.5rem;color:var(--pink);}
+  .brand span.co{color:var(--purple);font-size:1rem;vertical-align:middle;}
+  .back-link{font-size:.9rem;font-weight:700;color:var(--muted);text-decoration:none;}
+  .back-link:hover{color:var(--pink);}
+
+  .co-wrap{
+    max-width:1080px;
+    margin:0 auto;
+    padding:20px 16px 100px;
+    display:grid;
+    grid-template-columns:1.15fr 1fr;
+    gap:24px;
+    align-items:start;
+  }
+  @media (max-width:860px){
+    .co-wrap{grid-template-columns:1fr; padding-bottom:140px;}
+    .summary-col{order:-1;}
+  }
+
+  .card{
+    background:#fff;
+    border-radius:var(--radius);
+    padding:20px;
+    border:1px solid var(--line);
+    margin-bottom:18px;
+  }
+  .card h2{
+    font-size:1.05rem;
+    margin:0 0 14px;
+    color:var(--purple);
+  }
+
+  /* ---- Resumen del pedido ---- */
+  .summary-col{position:sticky; top:80px;}
+  .summary-item{display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid var(--line);}
+  .summary-item:last-child{border-bottom:none;}
+  .summary-item-imgwrap{position:relative; flex:0 0 auto;}
+  .summary-item-img{width:52px; height:52px; object-fit:cover; border-radius:10px; border:1px solid var(--line); background:#faf5f8;}
+  .summary-item-qty{
+    position:absolute; top:-6px; right:-6px;
+    background:var(--purple); color:#fff; font-size:.68rem; font-weight:800;
+    width:18px; height:18px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .summary-item-info{flex:1; min-width:0;}
+  .summary-item-name{font-weight:700; font-size:.9rem; line-height:1.2;}
+  .summary-item-cat{font-size:.75rem; color:var(--muted);}
+  .summary-item-price{font-weight:800; font-size:.88rem; white-space:nowrap;}
+
+  .totals-row{display:flex; justify-content:space-between; padding:6px 0; font-size:.92rem;}
+  .totals-row.pro{color:var(--pink-dark); font-weight:700;}
+  .totals-row.total{
+    border-top:2px solid var(--purple);
+    margin-top:8px; padding-top:12px;
+    font-size:1.15rem; font-weight:800;
+  }
+  .savings-note{font-size:.78rem; color:var(--green); font-weight:700; margin-top:4px;}
+
+  .empty-msg{text-align:center; color:var(--muted); padding:30px 10px;}
+  .empty-msg a{color:var(--pink); font-weight:800; text-decoration:none;}
+
+  /* ---- Formulario ---- */
+  label{display:block; font-size:.82rem; font-weight:700; color:var(--purple); margin-bottom:6px;}
+  input[type="text"], input[type="email"], input[type="tel"], select{
+    width:100%;
+    padding:12px 14px;
+    border:1.5px solid var(--line);
+    border-radius:12px;
+    font-family:inherit;
+    font-size:.95rem;
+    background:#fff;
+    margin-bottom:14px;
+    color:var(--ink);
+  }
+  input:focus, select:focus{outline:none; border-color:var(--pink);}
+  .field-row{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  @media (max-width:520px){.field-row{grid-template-columns:1fr;}}
+
+  .shipping-box{
+    display:flex; justify-content:space-between; align-items:center;
+    background:var(--pink-pale); border:1.5px solid var(--pink);
+    border-radius:12px; padding:14px 16px; margin-bottom:14px;
+  }
+  .shipping-box .lbl{font-weight:700; font-size:.88rem;}
+  .shipping-box .val{font-weight:800; color:var(--pink-dark); font-size:1rem;}
+
+  .pro-toggle{
+    display:flex; align-items:flex-start; gap:10px;
+    background:#fff8fc; border:1px dashed var(--pink); border-radius:12px;
+    padding:12px 14px; margin-bottom:10px; cursor:pointer;
+  }
+  .pro-toggle input{width:auto; margin:3px 0 0;}
+  .pro-toggle .t{font-weight:700; font-size:.88rem;}
+  .pro-toggle .s{font-size:.78rem; color:var(--muted);}
+
+  /* ---- Pago Nequi ---- */
+  .pay-option{
+    border:1.5px solid var(--pink); background:var(--pink-pale);
+    border-radius:12px; padding:16px; margin-bottom:10px;
+  }
+  .pay-option-head{display:flex; align-items:center; gap:10px; font-weight:800; font-size:1rem; margin-bottom:10px;}
+  .nequi-badge{
+    background:#da0081; color:#fff; font-family:'Fredoka One',cursive;
+    padding:3px 10px; border-radius:8px; font-size:.85rem;
+  }
+  .qr-wrap{display:flex; gap:16px; align-items:center; flex-wrap:wrap;}
+  .qr-wrap img{width:150px; height:150px; object-fit:contain; border-radius:12px; border:1px solid var(--line); background:#fff;}
+  .qr-instructions{flex:1; min-width:180px; font-size:.88rem; line-height:1.5;}
+  .copy-btn{
+    margin-top:8px; background:#fff; border:1.5px solid var(--pink); color:var(--pink-dark);
+    font-weight:800; font-size:.82rem; padding:8px 14px; border-radius:20px; cursor:pointer;
+  }
+  .copy-btn:hover{background:var(--pink); color:#fff;}
+  .pay-note{font-size:.78rem; color:var(--muted); margin-top:10px;}
+
+  .error-msg{
+    display:none; background:#ffe3ea; color:#c22a4c; border:1px solid #f3b3c3;
+    border-radius:10px; padding:10px 14px; font-size:.85rem; font-weight:700; margin-bottom:14px;
+  }
+
+  .confirm-btn{
+    width:100%; padding:16px; border:none; border-radius:14px;
+    background:var(--pink); color:#fff; font-family:'Fredoka One',cursive;
+    font-size:1.05rem; cursor:pointer; margin-top:6px;
+    box-shadow:0 8px 20px rgba(232,56,154,.35);
+  }
+  .confirm-btn:hover{background:var(--pink-dark);}
+  .confirm-btn:disabled{background:#e2c3d6; box-shadow:none; cursor:not-allowed;}
+
+  .privacy-link{display:block; text-align:center; margin-top:14px; font-size:.8rem; color:var(--muted); text-decoration:underline;}
+</style>
+</head>
+<body>
+
+<header class="co-header">
+  <a href="index.html" class="brand">✨ GLAM<span style="color:var(--purple)">baddie</span><span class="co">.co 💖</span></a>
+  <a href="index.html" class="back-link">← Seguir comprando</a>
+</header>
+
+<div class="co-wrap">
+
+  <!-- ── Columna izquierda: formulario ── -->
+  <div>
+    <form id="checkoutForm" onsubmit="return false;">
+
+      <div class="card">
+        <h2>📧 Contacto</h2>
+        <label for="email">Correo electrónico (opcional)</label>
+        <input type="email" id="email" placeholder="tucorreo@ejemplo.com">
+      </div>
+
+      <div class="card">
+        <h2>🚚 Entrega</h2>
+        <div class="field-row">
+          <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Nombre" required>
+          </div>
+          <div>
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" placeholder="Apellidos" required>
+          </div>
+        </div>
+
+        <label for="departamento">Departamento</label>
+        <select id="departamento"></select>
+
+        <div id="bogotaLocalidadWrap" style="display:none;">
+          <label for="localidadBogota">Localidad (Bogotá)</label>
+          <select id="localidadBogota"></select>
+        </div>
+
+        <div id="ciudadWrap">
+          <label for="ciudad">Ciudad / Municipio</label>
+          <input type="text" id="ciudad" placeholder="Ej: Soacha, Medellín, Cali...">
+        </div>
+
+        <label for="direccion">Dirección</label>
+        <input type="text" id="direccion" placeholder="Calle / Carrera # - #" required>
+
+        <label for="detalleDireccion">Casa, apartamento, barrio (opcional)</label>
+        <input type="text" id="detalleDireccion" placeholder="Apto, torre, barrio...">
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" placeholder="300 000 0000" required>
+      </div>
+
+      <div class="card">
+        <h2>📦 Método de envío</h2>
+        <div class="shipping-box">
+          <span class="lbl" id="shippingLabel">Selecciona tu departamento</span>
+          <span class="val" id="shippingValue">—</span>
+        </div>
+
+        <div id="zonaProWrap" style="display:none;">
+          <label class="pro-toggle" for="proCheckbox">
+            <input type="checkbox" id="proCheckbox">
+            <span>
+              <span class="t">⚡ Entrega PRO por franja horaria (+$5.000)</span><br>
+              <span class="s">Disponible en Bogotá y Soacha. Elige el horario que prefieras.</span>
+            </span>
+          </label>
+          <div id="franjaWrap" style="display:none;">
+            <label for="franja">Franja horaria</label>
+            <select id="franja">
+              <option value="" disabled selected>Selecciona una franja</option>
+              <option value="Madrugada">Madrugada</option>
+              <option value="Mañana">Mañana</option>
+              <option value="Tarde">Tarde</option>
+              <option value="Tarde-Noche">Tarde-Noche</option>
+              <option value="Noche">Noche</option>
+            </select>
+          </div>
+        </div>
+        <p class="pay-note">Envíos a nivel nacional con Inter Rapidísimo · Tiempo estimado 24-72h desde el despacho.</p>
+      </div>
+
+      <div class="card">
+        <h2>💳 Pago</h2>
+        <div class="pay-option">
+          <div class="pay-option-head"><span class="nequi-badge">Nequi</span> Paga escaneando el código QR</div>
+          <div class="qr-wrap">
+            <img src="nequi-qr.jpg" alt="Código QR de Nequi para pagar Glambaddie.co">
+            <div class="qr-instructions">
+              Abre tu app Nequi, escanea este código y transfiere el valor total de tu pedido.
+              <br><br>
+              <button type="button" class="copy-btn" id="copyNequiBtn">📋 Copiar número Nequi</button>
+            </div>
+          </div>
+          <p class="pay-note">Cuando el pago quede confirmado en tu app, pulsa "Confirmar pedido" y envíanos el comprobante por WhatsApp para despachar tu pedido. 💌</p>
+        </div>
+      </div>
+
+      <div class="error-msg" id="formError">
+        Por favor completa todos los campos obligatorios (nombre, apellidos, dirección, teléfono, departamento/ciudad y franja si elegiste entrega PRO).
+      </div>
+    </form>
+  </div>
+
+  <!-- ── Columna derecha: resumen ── -->
+  <div class="summary-col">
+    <div class="card">
+      <h2>🛍️ Resumen del pedido</h2>
+      <div id="summaryItems"></div>
+      <p class="empty-msg" id="emptyCartMsg" style="display:none;">
+        Tu carrito está vacío 🥺<br><a href="index.html">Ir a la tienda</a>
+      </p>
+
+      <div class="totals-row"><span>Subtotal</span><span id="subtotalValue">$0</span></div>
+      <div class="totals-row"><span>Envío</span><span id="shippingSummaryValue">Por calcular</span></div>
+      <div class="totals-row pro" id="proRow" style="display:none;"><span>Entrega PRO</span><span id="proValue">$0</span></div>
+      <div class="totals-row total"><span>Total</span><span id="totalValue">$0 COP</span></div>
+
+      <button class="confirm-btn" id="confirmBtn">✅ Confirmar pedido por WhatsApp</button>
+    </div>
+    <a href="#" class="privacy-link">Política de privacidad</a>
+  </div>
+
+</div>
+
+<script src="productos.js"></script>
+<script src="checkout.js"></script>
+</body>
+</html>
