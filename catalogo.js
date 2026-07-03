@@ -3,27 +3,7 @@
 //  Añade nuevos productos aquí sin tocar el HTML.
 // ============================================================
 
-const PRODUCTOS = [
-{ id:16, nombre:"Chicago Grey",         categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris elegante con aro oscuro pronunciado. Diseño moderno que amplía la mirada con efecto sofisticado.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"Chicago-Grey.jpg", nuevo:false },
-{ id:17, nombre:"Venice Brown",         categoria:"lentes", precio:35000, descripcion:"Lente de contacto marrón cálido con degradado natural. Efecto profundo y luminoso para una mirada irresistible.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 38%"], img:"Venice-Brown.jpg", nuevo:false },
-{ id:4,  nombre:"Sugar Strike",         categoria:"lentes", precio:35000, descripcion:"Lente de contacto marrón claro con efecto cálido.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"lente-sugar-strike.jpeg", nuevo:false },
-{ id:6,  nombre:"Tiffany",              categoria:"lentes", precio:35000, descripcion:"Lente de contacto azul con matices amarillos.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"lente-tiffany.jpeg", nuevo:false, oferta:true, precioOferta:30000 },
-{ id:7,  nombre:"Blackspot Blue",       categoria:"lentes", precio:35000, descripcion:"Azul profundo con efecto elegante.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"blackspot-blue.jpg", nuevo:false },
-{ id:8,  nombre:"Mermaid Green",        categoria:"lentes", precio:35000, descripcion:"Verde vibrante con degradado oscuro.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"mermaid-gree.jpg", video:"videos/mermaid-green.mp4", nuevo:false },
-{ id:9,  nombre:"Pattaya Green",        categoria:"lentes", precio:35000, descripcion:"Verde intenso que ilumina la mirada.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"pattaya-green.jpg", nuevo:false },
-{ id:24, nombre:"Holland Gray",          categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris claro con textura natural y aro definido. Diseño EYESHARE de uso anual para una mirada intensa.", especificaciones:["DIA: 14.5mm","Uso: 1 año"], img:"Holland-Gray.jpg", nuevo:false },
-{ id:11, nombre:"Pola Green",           categoria:"lentes", precio:35000, descripcion:"Lente de contacto verde natural con acabado suave y luminoso. Ideal para un look fresco y vibrante.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"pola-green.jpeg", nuevo:false },
-{ id:12, nombre:"Mood Brown",           categoria:"lentes", precio:35000, descripcion:"Lente de contacto marrón intenso con aro oscuro. Efecto profundo y natural para una mirada irresistible.", especificaciones:["DIA: 14.2mm","B.C: 8.6mm","Agua: 38%","6 meses"], img:"mood-brown.jpeg", nuevo:false },
-{ id:13, nombre:"Russian Grey",         categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris azulado con matices verdes. Efecto místico y elegante para una mirada única e irresistible.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"Russian-Grey.jpg", nuevo:false },
-{ id:14, nombre:"OMG Gray",             categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris natural con aro oscuro pronunciado. Diseño EYESHARE que amplía y profundiza la mirada.", especificaciones:["DIA: 14.0mm","Agua: 38%"], img:"OMG-Gray.jpg", nuevo:false },
-{ id:15, nombre:"Makabaka Purple",      categoria:"lentes", precio:35000, descripcion:"Lente de contacto lila con efecto degradado suave. Tono púrpura romántico que transforma la mirada con estilo.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"Makabaka-Purple.jpg", nuevo:false }, 
-{ id:27, nombre:"Hellenic Gray",        categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris suave con efecto ahumado y luminoso. Diseño EYESHARE de uso anual que transforma la mirada con naturalidad.", especificaciones:["DIA: 14.5mm","Uso: 1 año"], img:"HELLENIC-GRAY.jpg", nuevo:false },
-{ id:28, nombre:"Sahara Gray",          categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris verdoso con degradado natural y aro definido. Diseño AMARA que aporta profundidad y carácter a la mirada.", especificaciones:["DIA: 14.5mm"], img:"SAHARA-GRAY.jpg", nuevo:false },
-{ id:32, nombre:"Madrid Brown",        categoria:"lentes", precio:35000, descripcion:"Lente de contacto marrón dorado con degradado cálido y luminoso. Diseño EYESHARE que profundiza y embellece la mirada con un toque sofisticado.", especificaciones:["DIA: 14.0mm","Agua: 38%"], img:"Madrid-Brown.jpg", nuevo:false },
-{ id:34, nombre:"Stunna Girl Nadine",  categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris verdoso con vetas doradas y aro definido. Diseño UYAAI que aporta una mirada natural y profunda.", especificaciones:["DIA: 14.20mm"], img:"Stunna-Girl-Nadine.jpg", nuevo:true },
-{ id:35, nombre:"Sydney Green",        categoria:"lentes", precio:35000, descripcion:"Lente de contacto verde azulado con degradado luminoso y aro definido. Diseño EYESHARE de uso anual que resalta la mirada con brillo natural.", especificaciones:["DIA: 14.2mm","Uso: 1 año"], img:"Sydney-Green.jpg", nuevo:true },
-{ id:36, nombre:"Mirage Gray",         categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris claro con efecto difuminado y aro oscuro pronunciado. Diseño elegante que ilumina y amplía la mirada.", especificaciones:["DIA: 14.2mm"], img:"Mirage-Gray.jpg", nuevo:true },
-];
+// PRODUCTOS ahora vive en productos.js (cargado antes que este archivo en el HTML)
 // ============================================================
 //  Estado de la app
 // ============================================================
@@ -182,12 +162,9 @@ function updateCartUI() {
     itemsEl.innerHTML += `<button class="cart-clear-btn" onclick="clearCart()">🗑️ Vaciar carrito</button>`;
   }
 
-  const msg = cart.map(i => {
-    const p = PRODUCTOS.find(x => x.id === i.id);
-    return p ? `${p.nombre} x${i.cantidad} ($${(p.precio*i.cantidad).toLocaleString()})` : '';
-  }).filter(Boolean).join('%0A');
-  document.getElementById('waCheckoutBtn').href =
-    `https://wa.me/573189653717?text=Hola%20Glambaddie.co!%20Quiero%20pedir:%0A${msg}%0ATotal:%20$${total.toLocaleString()}%20COP`;
+  // El botón del carrito ahora lleva a checkout.html (ver index.html),
+  // que lee el carrito desde localStorage y arma el resumen del pedido,
+  // el cálculo de envío y el pago por Nequi.
 }
 
 // ============================================================
