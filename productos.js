@@ -24,11 +24,11 @@ const PRODUCTOS = [
 // =========================
 // NUEVAS REFERENCIAS
 // =========================
-{ id:37, nombre:"Brown",                categoria:"lentes", precio:35000, descripcion:"Lente de contacto marrón cálido con centro avellana y aro oscuro difuminado. Diseño natural que aporta profundidad y un efecto elegante a la mirada.", especificaciones:["Color: Brown"], img:"Brown.jpg", nuevo:true },
-
 { id:38, nombre:"Sydney Green",         categoria:"lentes", precio:35000, descripcion:"Lente de contacto verde azulado con centro luminoso y aro gris oscuro. Diseño EYESHARE de uso anual que resalta la mirada con un efecto fresco e intenso.", especificaciones:["DIA: 14.2mm","Uso: 1 año"], img:"Sydney-Green.jpg", nuevo:true },
 
 { id:39, nombre:"Alice",                categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris verdoso con acabado suave y natural. Diseño delicado que ilumina la mirada con un efecto tierno y sofisticado.", especificaciones:["Color: Alice"], img:"Alice.jpg", nuevo:true },
 
 { id:40, nombre:"Pattaya Brown",        categoria:"lentes", precio:35000, descripcion:"Lente de contacto marrón miel con destellos dorados y acabado natural. Diseño EYESHARE que aporta calidez, profundidad y brillo a la mirada.", especificaciones:["DIA: 14.2mm","Agua: 38%"], img:"Pattaya-Brown.jpg", nuevo:true },
+
+{ id:41, nombre:"Millennial Spice",     categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris ahumado con textura sutil y acabado sofisticado. Diseño intenso que aporta profundidad y dramatismo a la mirada.", especificaciones:["Color: Millennial Spice"], img:"Millennial-Spice.jpg", nuevo:true },
 ];
