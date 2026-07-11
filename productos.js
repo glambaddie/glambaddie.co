@@ -28,4 +28,10 @@ const PRODUCTOS = [
 { id:40, nombre:"Pattaya Brown",        categoria:"lentes", precio:35000, descripcion:"Lente de contacto marrón miel con destellos dorados y acabado natural. Diseño EYESHARE que aporta calidez, profundidad y brillo a la mirada.", especificaciones:["DIA: 14.2mm","Agua: 38%"], img:"Pattaya-Brown.jpg", nuevo:true },
 
 { id:41, nombre:"Millennial Spice",     categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris ahumado con textura sutil y acabado sofisticado. Diseño intenso que aporta profundidad y dramatismo a la mirada.", especificaciones:["Color: Millennial Spice"], img:"Millennial-Spice.jpg", nuevo:true },
+
+{ id:42, nombre:"Buff Brown",           categoria:"lentes", precio:35000, descripcion:"Lente de contacto marrón cálido con textura natural y aro definido. Diseño que aporta profundidad y un brillo dorado sutil a la mirada.", especificaciones:["DIA: 14.2mm","B.C: 8.6mm","Agua: 38%","Uso: 6 meses"], img:"Buff-Brown.jpg", nuevo:true },
+
+{ id:43, nombre:"OMG Brown",            categoria:"lentes", precio:35000, descripcion:"Lente de contacto marrón avellana con degradado luminoso desde el centro. Diseño EYESHARE que ilumina la mirada con un efecto cálido y natural.", especificaciones:["DIA: 14.0mm","B.C: 8.5mm","Agua: 38%","Uso: 6 meses"], img:"OMG-Brown.jpg", nuevo:true },
+
+{ id:44, nombre:"Shadow Gray",          categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris ahumado con aro oscuro pronunciado. Diseño elegante que profundiza y amplía la mirada con un efecto sofisticado.", especificaciones:["DIA: 14.2mm","B.C: 8.6mm","Agua: 38%","Uso: 6 meses"], img:"Shadow-Gray.jpg", nuevo:true },
 ];
