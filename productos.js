@@ -5,7 +5,6 @@
 // ============================================================
 
 const PRODUCTOS = [
-{ id:16, nombre:"Chicago Grey",         categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris elegante con aro oscuro pronunciado. Diseño moderno que amplía la mirada con efecto sofisticado.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"Chicago-Grey.jpg", nuevo:false },
 { id:17, nombre:"Venice Brown",         categoria:"lentes", precio:35000, descripcion:"Lente de contacto marrón cálido con degradado natural. Efecto profundo y luminoso para una mirada irresistible.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 38%"], img:"Venice-Brown.jpg", nuevo:false },
 { id:8,  nombre:"Mermaid Green",        categoria:"lentes", precio:35000, descripcion:"Verde vibrante con degradado oscuro.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"mermaid-gree.jpg", video:"videos/mermaid-green.mp4", nuevo:false },
 { id:9,  nombre:"Pattaya Green",        categoria:"lentes", precio:35000, descripcion:"Verde intenso que ilumina la mirada.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"pattaya-green.jpg", nuevo:false },
