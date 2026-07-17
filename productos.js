@@ -11,7 +11,6 @@ const PRODUCTOS = [
 { id:11, nombre:"Pola Green",           categoria:"lentes", precio:35000, descripcion:"Lente de contacto verde natural con acabado suave y luminoso. Ideal para un look fresco y vibrante.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"pola-green.jpeg", nuevo:false },
 { id:13, nombre:"Russian Grey",         categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris azulado con matices verdes. Efecto místico y elegante para una mirada única e irresistible.", especificaciones:["DIA: 14.2mm","B.C: 8.5mm","Agua: 40%"], img:"Russian-Grey.jpg", nuevo:false },
 { id:14, nombre:"OMG Gray",             categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris natural con aro oscuro pronunciado. Diseño EYESHARE que amplía y profundiza la mirada.", especificaciones:["DIA: 14.0mm","Agua: 38%"], img:"OMG-Gray.jpg", nuevo:false },
-{ id:15, 
 { id:35, nombre:"Sydney Green",         categoria:"lentes", precio:35000, descripcion:"Lente de contacto verde azulado con degradado luminoso y aro definido. Diseño EYESHARE de uso anual que resalta la mirada con brillo natural.", especificaciones:["DIA: 14.2mm","Uso: 1 año"], img:"Sydney-Green.jpg", nuevo:true },
 { id:36, nombre:"Mirage Gray",          categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris claro con efecto difuminado y aro oscuro pronunciado. Diseño elegante que ilumina y amplía la mirada.", especificaciones:["DIA: 14.2mm"], img:"Mirage-Gray.jpg", nuevo:true },
 
