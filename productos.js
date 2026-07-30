@@ -21,4 +21,12 @@ const PRODUCTOS = [
 // =========================
 { id:45, nombre:"Brown Green",          categoria:"lentes", precio:35000, descripcion:"Lente de contacto verde oliva con base marrón y textura natural. Diseño OVOLOOK de uso semestral que aporta profundidad y un efecto cálido a la mirada.", especificaciones:["DIA: 14.2mm","G.DIA: 14.2mm","B.C: 8.6mm","Agua: 38%","Uso: 6 meses"], img:"Brown-Green.jpg", nuevo:true },
 { id:46, nombre:"OMG Brown",            categoria:"lentes", precio:35000, descripcion:"Lente de contacto marrón natural con degradado suave y aro definido. Diseño de uso semestral que ilumina la mirada con un efecto cálido y luminoso.", especificaciones:["DIA: 14.0mm","B.C: 8.5mm","Agua: 38%","Uso: 6 meses"], img:"OMG-Brown.jpg", nuevo:true },
+// =========================
+// NUEVAS REFERENCIAS
+// =========================
+{ id:47, nombre:"Pattaya Blue",         categoria:"lentes", precio:35000, descripcion:"Lente de contacto azul grisáceo con textura natural y aro definido. Diseño UYAAI que aporta profundidad y un brillo suave a la mirada.", especificaciones:["Color: Pattaya Blue"], img:"Pattaya-Blue.jpg", nuevo:true },
+{ id:48, nombre:"Insomnia Artist",      categoria:"lentes", precio:35000, descripcion:"Lente de contacto verde azulado con acabado luminoso y natural. Diseño Mill Creek que ilumina la mirada con un efecto fresco y cristalino.", especificaciones:["Color: Insomnia Artist"], img:"Insomnia-Artist.jpg", nuevo:true },
+{ id:49, nombre:"Cloud Sun Brown",      categoria:"lentes", precio:35000, descripcion:"Lente de contacto marrón ámbar con degradado cálido y aro definido. Diseño OVOLOOK de uso semestral que aporta un brillo dorado natural a la mirada.", especificaciones:["DIA: 14.2mm","G.DIA: 13.4mm","B.C: 8.6mm","Agua: 38%","Uso: 6 meses"], img:"Cloud-Sun-Brown.jpg", nuevo:true },
+{ id:50, nombre:"Richgirl Gray",        categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris con base marrón y textura suave. Diseño EYESHARE que aporta un efecto natural y elegante a la mirada.", especificaciones:["DIA: 14.0mm","Agua: 40%"], img:"Richgirl-Gray.jpg", nuevo:true },
+{ id:51, nombre:"Barbie Gray",          categoria:"lentes", precio:35000, descripcion:"Lente de contacto gris claro con acabado luminoso y aro suave. Diseño EYESHARE de uso anual que ilumina la mirada con un efecto claro y radiante.", especificaciones:["DIA: 14.2mm","Agua: 40%","Uso: 1 año"], img:"Barbie-Gray.jpg", nuevo:true },
 ];
