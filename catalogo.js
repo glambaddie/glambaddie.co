@@ -115,6 +115,35 @@ function scheduleRender() {
 }
 
 // ============================================================
+//  Pedido por WhatsApp
+// ============================================================
+const WHATSAPP_NUMBER = "573189653717";
+
+function buildWhatsAppLink() {
+  if (cart.length === 0) return "#";
+
+  let total = 0;
+  const lineas = cart.map(i => {
+    const p = PRODUCTOS.find(x => x.id === i.id);
+    if (!p) return '';
+    const sub = p.precio * i.cantidad;
+    total += sub;
+    return `• ${p.nombre} x${i.cantidad} - $${sub.toLocaleString()}`;
+  }).filter(Boolean).join('\n');
+
+  const msg =
+`Hola Glambaddie.co! 💖 Quiero hacer este pedido:
+
+${lineas}
+
+*TOTAL: $${total.toLocaleString()} COP*
+
+¿Me confirmas disponibilidad, envío y forma de pago? 🙏`;
+
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+}
+
+// ============================================================
 //  Carrito
 // ============================================================
 function addToCart(id) {
@@ -162,9 +191,12 @@ function updateCartUI() {
     itemsEl.innerHTML += `<button class="cart-clear-btn" onclick="clearCart()">🗑️ Vaciar carrito</button>`;
   }
 
-  // El botón del carrito ahora lleva a checkout.html (ver index.html),
-  // que lee el carrito desde localStorage y arma el resumen del pedido,
-  // el cálculo de envío y el pago por Nequi.
+  const waBtn = document.getElementById('waCheckoutBtn');
+  if (waBtn) {
+    waBtn.href = buildWhatsAppLink();
+    waBtn.style.opacity = cart.length === 0 ? '0.5' : '1';
+    waBtn.style.pointerEvents = cart.length === 0 ? 'none' : 'auto';
+  }
 }
 
 // ============================================================
