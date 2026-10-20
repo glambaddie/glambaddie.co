@@ -8,6 +8,7 @@ const PRODUCTOS = [
 // =========================
 // NUEVAS REFERENCIAS
 // =========================
+{ id:61, nombre:"Amber Muse",          categoria:"lentes", precio:35000, descripcion:"Lente de contacto ámbar grisáceo con textura natural y degradado cálido. Diseño UYAAI que aporta profundidad y un brillo suave a la mirada.", especificaciones:["Color: Amber Muse"], img:"Amber-Muse.jpg", nuevo:true },
 { id:54, nombre:"Hexed Twin",          categoria:"lentes", precio:35000, descripcion:"Lente de contacto de fantasía rojo intenso con doble pupila y detalles de venas. Diseño UYAAI ideal para cosplay y looks de impacto.", especificaciones:["Color: Hexed Twin"], img:"Hexed-Twin.jpg", nuevo:true },
 { id:55, nombre:"Block Black",          categoria:"lentes", precio:35000, descripcion:"Lente de contacto negro total que cubre el ojo completo con acabado brillante. Diseño de fantasía para cosplay y looks oscuros.", especificaciones:["Color: Block Black"], img:"Block-Black.jpg", nuevo:true },
 { id:56, nombre:"Manson White",         categoria:"lentes", precio:35000, descripcion:"Lente de contacto blanco de fantasía con aro negro definido y pupila al descubierto. Diseño llamativo para cosplay y maquillaje artístico.", especificaciones:["Color: Manson White"], img:"Manson-White.jpg", nuevo:true },
